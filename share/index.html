@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스터디 공유 링크</title>
+    <script>
+      const share = new URLSearchParams(window.location.search).get('share') || ''
+      const home = new URL('../', window.location.href)
+      home.searchParams.set('study-share', share)
+      window.location.replace(home.href)
+    </script>
+  </head>
+  <body>
+    <p>스터디 화면으로 이동하고 있어요. 자바스크립트를 사용하도록 설정해주세요.</p>
+  </body>
+</html>
